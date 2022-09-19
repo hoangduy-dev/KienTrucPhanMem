@@ -27,4 +27,28 @@ public class ChuyenBayServiceIml implements ChuyenBayService{
 		return repository.findAll();
 	}
 
+	@Override
+	public List<ChuyenBay> findChuyenBayBetween8000and10000() {
+		// TODO Auto-generated method stub
+		return repository.findChuyenBayBetween8000and10000();
+	}
+
+	@Override
+	public List<ChuyenBay> findChuyenBaySGNtoBMV() {
+		// TODO Auto-generated method stub
+		return repository.findChuyenBaySGNtoBMV();
+	}
+
+	@Override
+	public List<ChuyenBay> findChuyenBayFromSGN() {
+		// TODO Auto-generated method stub
+		return repository.findChuyenBayFromSGN();
+	}
+
+	@Override
+	public List<ChuyenBay> findChuyenBayFrom(String noiDi) {
+		// TODO Auto-generated method stub
+		return repository.findChuyenBayFrom(noiDi);
+	}
+
 }

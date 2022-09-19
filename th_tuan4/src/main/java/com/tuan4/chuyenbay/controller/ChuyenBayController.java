@@ -29,5 +29,24 @@ public class ChuyenBayController {
 		return service.chuyenBayDi(gaDen);
 	}
 	
+	@GetMapping("/Between8000and10000")
+	public List<ChuyenBay> findChuyenBayBetween8000and10000(){
+		return service.findChuyenBayBetween8000and10000();
+	}
+	
+	@GetMapping("/SGNtoBMT")
+	public List<ChuyenBay> findChuyenBaySGNtoBMV(){
+		return service.findChuyenBaySGNtoBMV();
+	}
+	
+	@GetMapping("/FromSGN")
+	List<ChuyenBay> findChuyenBayFromSGN(){
+		return service.findChuyenBayFromSGN();
+	}
+	
+	@GetMapping("/{noiDi}")
+	List<ChuyenBay> findChuyenBayFrom(@PathVariable("noiDi") String noiDi){
+		return service.findChuyenBayFrom(noiDi);
+	}
 	
 }

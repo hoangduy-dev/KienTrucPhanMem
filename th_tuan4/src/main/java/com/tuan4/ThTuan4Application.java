@@ -18,14 +18,5 @@ public class ThTuan4Application {
 	public static void main(String[] args) {
 		SpringApplication.run(ThTuan4Application.class, args);
 	}
-	
-	@Bean
-	public CommandLineRunner demo(ChuyenBayRepository repository) {
-		 return (args) -> {
-			 for (ChuyenBay chuyenBay : repository.findAll()) {
-			        log.info(chuyenBay.toString());
-			    }
-		 };
-	}
 
 }

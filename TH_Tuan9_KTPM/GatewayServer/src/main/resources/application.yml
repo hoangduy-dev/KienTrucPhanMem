@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: billingService
+        uri: http://192.168.1.5:58917/
+        predicates:
+        - Path=/billing/**
+      - id: passengerService
+        uri: http://192.168.1.5:8081/
+        predicates:
+        - Path=/passengers/**
